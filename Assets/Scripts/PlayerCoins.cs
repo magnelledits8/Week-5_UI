@@ -1,13 +1,15 @@
 using UnityEngine;
+using TMPro;                  // NEW
 
 public class PlayerCoins : MonoBehaviour
 {
     public int coins = 0;
+    public TMP_Text coinText;    // NEW
 
     public void AddCoin()
     {
-        // I picked up a coin, so I count it
         coins = coins + 1;
-        Debug.Log("Coins: " + coins);
+        // NEW, replaces Debug.Log: tell the player
+        coinText.text = "Coins: " + coins;
     }
 }
